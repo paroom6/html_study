@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            box-sizing: border-box;
+            margin: 40px;
+            border: 3px solid #222;
+            /* border-width: 1px 2px 3px 4px;
+            border-top: 5px solid red; */
+            /* border-radius: 10px; */
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            padding: 20px 10px;
+            /* content: ; width, height로 대체*/
+            width: 100px;
+            height: 100px;
+            background-color: #aaa;
+        }
+        .text {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: #222; 
+            color: white;
+        }
+        .box1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            background-color: #aaa;
+        }
+        .box2 {
+            /* 마진의 영역끼리 겹칠경우 상하의 경우 중첩된다. 한방향으로 설정하여 중첩되지 않도록 한다 */
+            margin: 20px; 
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">테스트</div>
+    <input type="text">
+    <span class="text">일반 텍스트</span>
+    <div class="box1">
+        <span class="box2"></span>
+        <span class="box2"></span>
+        <span class="box2"></span>
+        <span class="box2"></span>
+    </div>
+</body>
+</html>

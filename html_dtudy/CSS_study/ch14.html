@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* flex-wrap: wrap; */
+            border: 1px solid black;
+            padding: 10px;
+            width:  200px;
+            height: 400px;
+        }
+        .box {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            /* margin의 경우 갯수에 관계없이 일정한 사이즈의 여백,  justify-content 갯수에 관계없이 동일한 사이즈의 여백*/
+            margin-bottom: 10px;       
+            border: 1px solid black;
+            /* 100%가 된다면 가운데 정렬이 된 것처럼 보인다. */
+            width: 100%;
+            height: 50px;
+        }
+        button {
+            width: 30px;
+            height: 15px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            /* align-items: flex-start; 각각의 한줄한줄이 기준으로 보아서 정렬*/
+            align-content: space-between;/* 전체영역을 기준으로 정렬*/
+            border: 1px solid black;
+            padding: 10px;
+            width: 600px;
+            height: 400px;
+        }
+        .box2 {
+            margin: 5px;
+            border: 1px solid salmon;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <button></button>
+        </div>
+        <div class="box">
+            <button></button>
+        </div>
+        <div class="box">
+            <button></button>
+        </div>
+        <div class="box">
+            <button></button>
+        </div>
+        <div class="box">
+            <button></button>
+        </div>
+        <div class="box">
+            <button></button>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

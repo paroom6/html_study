@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            border: 1px solid black;
+            border-bottom: 0px;
+            width: 388px;
+            height: 361px;
+        }
+        
+        .td1 {
+            border: 1px solid black;    
+            border-top: 0px solid black;      
+            border-left: 0px solid black;      
+            padding: 6px 13px;
+            width: 388px;
+            height: 34px;
+            font-size: 14px;
+            background-color: white;
+        }
+        .td2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            border: 1px solid black;
+            border-top: 0px;
+            border-left: 0px;
+            border-bottom: 1px solid black;
+            padding: 6px 13px;
+            width: 388px;
+            height: 38px;
+            background-color: #d0d7de;
+        }
+        .container > div > div {
+            margin-right: 5px;
+            border: 1px;
+            font-size: 13px;
+            padding: 2px;
+            height: 20px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+            <div class="td1">Language</div>
+        
+            <div class="td2">
+                <div style="background-color: #ffee4a;">Javascript</div>
+                <div style="background-color: #54AEFF;">TypeScript</div>
+                <div style="background-color: #0969DA;">C++</div>
+                <div style="background-color: #033d8b;">java</div>
+                <div>Python</div>
+            </div>
+        
+            <div class="td1">Web Front-End</div>
+       
+            <div class="td2">
+                <div style="background-color: #B6E3FF;">React</div>
+                <div style="background-color: #30a14e;">Vue.js</div>
+            </div>
+      
+            <div class="td1">Web Back-End</div>
+       
+            <div class="td2">
+                <div style="background-color: #fa4549;">JSP</div>
+                <div style="background-color: #7ee787;">Spring</div>
+                <div style="background-color: #7ee787;">Spring Boot</div>
+            </div>
+        
+            <div class="td1">DataBase</div>
+        
+            <div class="td2">
+                <div style="background-color: #f85149;">Oracle</div>
+                <div style="background-color: #79c0ff;">MySQL</div>
+                <div style="background-color: #b62324;">MS SQL Server</div>
+            </div>
+        
+            <div class="td1">etc</div>
+        
+            <div class="td2">
+                <div style="background-color: #79c0ff;">Adobe Photoshop</div>
+                <div style="background-color: #d2a8ff;">Adobe Premiere Pro</div>
+                <div style="background-color: #7ee787;">Pro Tools</div>
+            </div>
+            
+    </div>
+</body>
+</html>

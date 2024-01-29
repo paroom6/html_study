@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            /* display: flex; 부모에게 부여 주축: 배치할 방향 교차축: 주축과 교차하는 축*/
+            flex-direction: column-reverse;
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+            align-items: center;
+            /* align-content: start;        */
+            /* flex-wrap: wrap; 자동 정렬 줄 바꿈 없다면 콘텐츠의 사이즈를 자동으로 줄여서 한 줄에 욱여넣는다*/
+            /* justify-content: flex-start;가 디폴트라서 일단은 우측 정렬해준다. */
+            /* justify-content: flex-end; 끝에서 부터 정렬 */
+            /* justify-content: space-around; 자동으로 일정한 간격으로분할해 준다*/
+            /* justify-content: space-between; 양끝을 붙여주고 일정한 간격으로 분할해 준다. */
+            /* 겹쳐야 할 때 빼고는 왠만하면 FLEX로 해결된다. */
+            border: 1px solid black;
+            height: 400px;
+        }
+        .box1 {
+            /* display: inline-block; 자간때문에 공백이 생김*/
+            border: 1px solid black;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="box1">3</div>
+        <div class="box1">4</div>
+        <div class="box1">5</div>
+        <div class="box1">6</div>
+        <div class="box1">7</div>
+        <div class="box1">8</div>
+        <div class="box1">9</div>
+        <div class="box1">10</div>
+        <div class="box1">11</div>
+        <div class="box1">12</div>
+        <div class="box1">13</div>
+        <div class="box1">14</div>
+    </div>
+</body>
+</html>

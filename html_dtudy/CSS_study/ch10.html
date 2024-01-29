@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* label은 기본적으로 인라인 block으로 잡아야 넓이,높이가 적용 */
+        label {
+            position: relative;
+            display: block;
+            border: 1px solid #bdbdbd;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        /* 체크박스와 label이 연동, label을 눌렀을때도 checked가된다 */
+        
+        input[type="checkbox"]:checked + label > div{
+            position: relative;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%; 
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            background-color: blue;
+        }
+        input[type="checkbox"]:checked + label > div:not(#chk1:checked + label > div) {
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="chk1">
+    <label for="chk1">
+        <div></div>
+    </label>
+    <input type="checkbox" id="chk2">
+    <label for="chk2">
+        <div></div>
+    </label>
+</body>
+</html>

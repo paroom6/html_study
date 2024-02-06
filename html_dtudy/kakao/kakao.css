@@ -1,0 +1,45 @@
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+.main {
+    width: 100%;
+    height: 100%;
+}
+.title {
+    display: flex;
+    padding-top: 50px;
+}
+.logo_kakao {
+    margin: 0 auto;
+}
+.maincontent {
+    width: 580px;
+    height: 100%;
+    margin: 40px auto 42px;
+    padding: 0 69px;
+    border: 1px solid rgba(0,0,0,.12);
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    height: 100%;
+    padding: 55px 0 50px;
+    box-sizing: border-box;
+}
+#id, #password{
+    padding: 9px 0px;
+    width: 440px;
+    height: 43px;
+}

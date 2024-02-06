@@ -1,9 +1,7 @@
-id = 1; // 지역변수가 되면 안된다.
+let id = 1; // 지역변수가 되면 안된다.
 const submitButton = document.querySelector("#submit");
 submitButton.onclick = () => {
-    
-    const inputs = document.querySelectorAll("input");
-    
+    const inputs = document.querySelectorAll(".input");
     dataList = document.querySelector("#data-list");
     dataList.innerHTML +=  
         `<tr>

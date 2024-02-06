@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kakao.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <header>
+                <div class="title">
+                    <span class="logo_kakao"><span class="ir_wa">Kakao</span></span>
+                </div>  
+            </header>
+            <main>
+                <div class="maincontent">
+                    <form class="login-box">
+                        <input type="text" id="id" name="id" placeholder="카카오메일 아이디, 이메일, 전화번호">
+                        <input type="password" id="password" name="password" placeholder="비밀번호">
+                        <div >
+                            <button class="btn_g" type="submit" onclick="">로그인</button> <!--form 안에서만 사용-->
+                        </form>
+                    </div>
+                    
+                    
+                </div>
+            </main>
+        </div>
+        <footer></footer>
+    </div>
+
+    <script src="kakao.js">
+        console.log(queryseleter("#id").value);
+    </script>
+</body>
+</html>

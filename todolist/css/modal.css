@@ -1,0 +1,79 @@
+/* 페이지 위의 창: modal 창으로 따로 빼서 정리 */
+.root-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000033;
+}
+
+.modal-show {
+    display: flex;
+}
+.modal-layout {
+
+    border: 1px solid #dbdbdb;
+    width: 300px;
+    background-color: white;
+
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    height: 50px;
+}
+
+.modal-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.modal-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+    height: 200px;
+}
+.todo-input {
+    /* 클릭시 나타나는 라인 */
+    outline: none;
+    border: 1px solid #dbdbdb;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    &:focus {
+        background-color: #fafafa;
+    }
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.modal-button {
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    width: 100%;
+    background-color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.modal-button:nth-of-type(1) {
+    border-right: 1px solid #dbdbdb;
+}

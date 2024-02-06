@@ -1,4 +1,5 @@
 .side-bar-layout {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -8,14 +9,28 @@
     /* opacity: 0.5; 투명도 설정 혹은 RGB다움에 투명도 설정*/
 }
 
+.side-bar-show {
+    display: block;
+}
+
 .side-bar-container {
+    position: absolute;
+    left: -320px;
+    top: 0px;
+    /* 종속관계의 display none에 transition이 무시당한다.*/
+    transition: left 0.5s ease-in-out; 
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     width: 320px;
     height: 100%;
     background-color: white;
-    box-shadow: 1px 0px 10px #00000011;
+    box-shadow: 1px 0px 10px #00000011;   
 }
+
+.side-bar-container-show {
+    left: 0px;
+}
+
 .side-bar-header {
     display: flex;
     justify-content: space-between;
@@ -23,7 +38,6 @@
     padding: 8px 8px 0px;
     width: 100%;
 }
-
 .side-bar-logo {
     display: flex;
     align-items: center;

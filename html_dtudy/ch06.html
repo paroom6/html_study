@@ -29,16 +29,16 @@
         </div>
     
         <div>
-            <input type="checkbox" id="phoneCheck" onchange="handleCheck(this)"/> <!--value의 값이 변하면 이벤트발생시 함수발동-->
-            <label for="phone">연락처</label>
-            <input type="tel" id="phone" name="phone" > <!--readonly 포커스 가능 만약 데이터가 들어가있으면 데이터 전송, disabled 포커스 불가 데이터 전송안됨--><!--disabled = "true"-->
+            <input type="checkbox" id="phoneCheck" checked onchange="handleCheck(this)"/> <!--value의 값이 변하면 이벤트발생시 함수발동-->
+            <label for="phone" >연락처</label>
+            <input type="tel" id="phone" name="phone" disabled="true"> <!--readonly 포커스 가능 만약 데이터가 들어가있으면 데이터 전송, disabled 포커스 불가 데이터 전송안됨--><!--disabled = "true"-->
             <Script>
-                window.onload = () => {
-                    const phoneCheckBoxObject = document.querySelector("#phoneCheckBox");
+                window.onload = () => { //onload 로딩되었을 때 체크박스의 상태와 입력불가의 상태를 가져와서 입력불가를 체크가 되어있으면 입력가능하게한다. :onchange 이벤트의 경우 변화가 일어나야 작동하기 때문에 처음부터 체크된 상태면 작동하지 않기 때문
+                    const phoneCheckBoxObject = document.querySelector("#phoneCheck");
                     const phoneInputObject = document.querySelector("#phone");
                     phoneInputObject.disabled = !phoneCheckBoxObject.checked;
                     }
-                function handleCheck(object) {
+                handleCheck = (object) => {
                     const phoneInputObject = document.querySelector("#phone");
                     phoneInputObject.disabled = !object.checked;
                     if(!object.checked) {

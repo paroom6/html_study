@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    color: #333;
+}
+
+button {
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 1px 0px 10px #00000011;
+    background-color: #fafafa;
+    cursor: pointer;
+    &:hover {
+        background-color: #eee;
+    }
+    &:active {
+        background-color: #aaa;
+    }
+}

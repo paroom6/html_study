@@ -1,6 +1,7 @@
 //자바스크립트의 객체 형태 = {key: value, key: value} 중괄호를 열고 닫는것 자체로 객체 
 let student = { //클래스없이 바로 생성 가장 자주 사용함
-    age: 31
+    age: 31,
+    name: " 조성민"
 }
 
 console.log(student);

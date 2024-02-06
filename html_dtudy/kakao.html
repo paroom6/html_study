@@ -6,11 +6,12 @@
     <title>Document</title>
     <style>
         .container {
-            height: 1131;
-            width: 953;
-
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         .kakao {
+            display: flex;
             width: 88px;
             height: 27px;
             margin: 0 auto;
@@ -19,14 +20,23 @@
             font-size: 19px;
             line-height: 27px;
         }
+        .ir_wa {
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
         .logo {
-            margin: 0 521.5px;
+            justify-content: center;
+            align-items: center;
         }
         .content-article {
+            display: flex;
+            justify-content: center;
             width: 580px;
             height: 100%;
             /* margin에 auto를 잡으면 가운데 정렬 후 나머지 margin으로 */
-            margin: 40px auto 42px; 
+            margin: 40px auto ; 
             padding: 0 69px;
             border: 1px solid rgba(0,0,0,.12);
             font-size: 12px;
@@ -38,19 +48,55 @@
             margin: 0px auto;
         }
         .btn_g {
-    display: block;
-    width: 100%;
-    height: 50px;
-    border-radius: 4px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 51px;
-    color: #191919;
-    background-color: #fee500;
-}   
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 4px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 51px;
+            color: #191919;
+            background-color: #fee500;
+        }   
     a{
         text-decoration: none;
         color: black;
+    }
+    .login-main {
+        padding: 55px 0px 50px;
+        display: flex;
+        flex-direction:column;
+        
+    }
+    ul{
+        list-style: none;
+    }
+    .footers {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 12px;
+    }
+    #blockquote {
+        border-radius: 5px;
+        color: white ;
+        font-size: 12px;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .yellow {
+        position: relative;
+        color: #fee500;
+    }
+    #checking {
+        border: 0px;
+        background-color: white;
+    }
+    #saveLogin {
+        border-radius: 7.5px;
+    }
+    #username {
+        border: 0px;
+        border-bottom: 1px solid #dbdbdb;
     }
     </style>
 </head>
@@ -59,84 +105,92 @@
     <div class="container">
 
         <header class="kakao">
-            <h1 class="logo">kakao</h1>
+            <h1 class="logo"><span class="ir_wa">Kakao</span></h1>
         </header>
         
         <main class="content-article ">
             <section>
                 <form action="">
-                    
-                    <div>
-                        <input type="text" id = username name="id" placeholder="카카오메일 아이디, 이메일, 전화번호">
-                    </div>
-                    
-                    <div>
-                        <input type="password" id = password name="password" placeholder="비밀번호">
-                    </div>
-                    
-                    <div>
-                        <input type="checkbox" name="saveLogin" id="saveLogin">
-                        <label for="saveLogin">간편로그인 정보 저장</label>
-                        <button type="button" onclick="clickCheck(this)" >ⓘ</button>
-                    <blockquote id = "blockquote" hidden>
-                        <div>로그인한 계정의 정보가 저장됩니다.개인정보 보호를</div>
-                        <div>위해 개인 기기에서만 사용해 주세요.</div>
-                        <a href="https://cs.kakao.com/helps?category=166&locale=ko&service=52&articleId=1073206315&device=423">
-                            도움말 보기
-                        </a>
-                    </blockquote>
-                    <Script>
-                        function clickCheck(object) {
-                            const blockquoteShowObject = document.querySelector("#blockquote");
-                            if(!object.checked) {
-                                blockquoteShowObject.value = hidden;
-                            }
-                        }
-                        
-                        </Script>
-                </div>
-                
-                <div >
-                    <button class="btn_g" type="submit" onclick="">로그인</button> <!--form 안에서만 사용-->
-                </div>
-                
-                <div><p>또는</p><div>
-                    
-                    <div>
+                    <div class="login-main">
 
-                        <a href="https://accounts.kakao.com/qr_login/?append_stay_signed_in=false&continue=https%3A%2F%2Fmail.kakao.com&lang=ko&stay_signed_in=false#main" target="_self">
-                            <button type="button">QR코드 로그인</button> <!--form 안에서만 사용-->
-                        </a>                
-                    </div>
-                    
-                    <div>
                         <div>
-                            <a href="https://accounts.kakao.com/weblogin/create_account/?lang=ko&continue=https%3A%2F%2Fmail.kakao.com#selectVerifyMethod" target="_self">회원가입</a>
+                            <input type="text" id = "username" name="id" placeholder="카카오메일 아이디, 이메일, 전화번호">
                         </div>
                         
                         <div>
-                        <a href="https://accounts.kakao.com/weblogin/find_account?lang=ko&continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fmail.kakao.com" target="_self">계정 찾기</a>
-                        <a href="https://accounts.kakao.com/weblogin/find_password?lang=ko&continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fmail.kakao.com" target="_self">비밀번호 찾기</a>
-                    </div>
-                </div>
-                
-            </form>
-        </section>
-    </main>
-    <footer>
-        <div>
-            <ul>
-                <a href="https://www.kakao.com/policy/terms?lang=ko" target="_self"><li>이용약관</li></a>
-                <a href="https://www.kakao.com/policy/privacy?lang=ko" target="_self"><li><strong>개인정보 처리방침</strong></li></a>
-                <a href="https://www.kakao.com/policy/oppolicy?lang=ko" target="_self"><li>운영정책</li></a>
-                <a href="https://cs.kakao.com/" target="_self"><li>고객센터</li></a>
-                <a href="https://www.kakao.com/notices?lang=ko" target="_self"><li>공지사항</li></a>
-                <select name="lang" id="lang">
-                    <option value="ko" selected>한국어</option>
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                </select>   
-            </ul>
+                            <input type="password" id = "password" name="password" placeholder="비밀번호">
+                        </div>
+                        
+                        <div>
+                            <input type="checkbox" name="saveLogin" id="saveLogin">
+                            <label for="saveLogin">간편로그인 정보 저장</label>
+                            <button type="button" id="checking" onclick="clickCheck(this)" >ⓘ</button>
+                            <div id = "blockquote" style="display: none;">
+                               로그인한 계정의 정보가 저장됩니다.개인정보 보호를<br>위해 개인 기기에서만 사용해 주세요.
+                                <a href="https://cs.kakao.com/helps?category=166&locale=ko&service=52&articleId=1073206315&device=423" class="yellow">
+                                    도움말 보기
+                                </a>
+                            </div>
+                            
+                        </div>
+                        
+                        <div >
+                            <button class="btn_g" type="submit" onclick="">로그인</button> <!--form 안에서만 사용-->
+                        </div>
+                        
+                        <div><p>또는</p><div>
+                            
+                            <div>
+                                
+                                <a href="https://accounts.kakao.com/qr_login/?append_stay_signed_in=false&continue=https%3A%2F%2Fmail.kakao.com&lang=ko&stay_signed_in=false#main" target="_self">
+                                    <button type="button">QR코드 로그인</button> <!--form 안에서만 사용-->
+                                </a>                
+                            </div>
+                            
+                            <div>
+                                <div>
+                                    <a href="https://accounts.kakao.com/weblogin/create_account/?lang=ko&continue=https%3A%2F%2Fmail.kakao.com#selectVerifyMethod" target="_self">회원가입</a>
+                                </div>
+                                
+                                <div>
+                                    <a href="https://accounts.kakao.com/weblogin/find_account?lang=ko&continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fmail.kakao.com" target="_self">계정 찾기</a>
+                                    <a href="https://accounts.kakao.com/weblogin/find_password?lang=ko&continue=%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fmail.kakao.com" target="_self">비밀번호 찾기</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </section>
+                <Script>
+                    let onOff = false;
+                    function clickCheck(object) {
+                        const blockquoteShowObject = document.querySelector("#blockquote");
+                        const checkbutton = document.querySelector("#checking");
+                        onOff = !onOff;
+                        if(onOff) {
+                           blockquoteShowObject.style.display = "block";                           
+                        }
+                        if(!onOff) {
+                           blockquoteShowObject.style.display = "none";  
+                        }
+                        console.log(!onOff);
+                    }
+                </Script>
+        </main>
+        <footer>
+            <div class="footers">
+                <ul >
+                    <a href="https://www.kakao.com/policy/terms?lang=ko" target="_self"><li>이용약관</li></a>
+                    <a href="https://www.kakao.com/policy/privacy?lang=ko" target="_self"><li><strong>개인정보 처리방침</strong></li></a>
+                    <a href="https://www.kakao.com/policy/oppolicy?lang=ko" target="_self"><li>운영정책</li></a>
+                    <a href="https://cs.kakao.com/" target="_self"><li>고객센터</li></a>
+                    <a href="https://www.kakao.com/notices?lang=ko" target="_self"><li>공지사항</li></a>
+                    <select name="lang" id="lang">
+                        <option value="ko" selected>한국어</option>
+                        <option value="en">English</option>
+                        <option value="ja">日本語</option>
+                    </select>   
+                </ul>
         </div>
         <div>
             <p>Copyright © Kakao Corp. All rights reserved.</p>

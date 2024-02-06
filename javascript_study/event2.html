@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="text-inputs" placeholder="username">
+    <input type="text" class="text-inputs" placeholder="password">
+    <input type="text" class="text-inputs" placeholder="name">
+    <input type="text" class="text-inputs" placeholder="email">
+    <ul>
+        <li class="preview-datas">username: </li>
+        <li class="preview-datas">password: </li>
+        <li class="preview-datas">name: </li>
+        <li class="preview-datas">email: </li>
+    </ul>
+
+
+    <script>
+        const textInputs = document.querySelectorAll(".text-inputs");
+        const previewList = document.querySelectorAll(".preview-datas");
+        //enter를 인식
+        //input을 구별
+        //다음 input이 있다면 focus이동
+        for (let j = 0; j < textInputs.length; j++) {
+            textInputs[j].onkeyup = (e) => {
+                if(e.keyCode === 13) {
+                    if(j < textInputs.length - 1) {
+
+                        textInputs[j + 1].focus();
+                    } else {
+                        for (let i = 0; i < textInputs.length; i++) {
+                            if(textInputs[i].value.length === 0) {
+                                textInputs[i].focus();
+                                return;
+                            }
+                        } 
+                        for (let i = 0; i < textInputs.length; i++) {
+                            previewList[i].innerHTML += textInputs[i].value;
+                            // textInputs[i].value = ""; 
+                            textInputs[j].blur();
+                        }
+                    } 
+                }
+            } 
+        }
+
+    </script>
+
+</body>
+</html>

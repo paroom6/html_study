@@ -44,6 +44,7 @@
     height: 200px;
 }
 .todo-input {
+    text-align: center;
     /* 클릭시 나타나는 라인 */
     outline: none;
     border: 1px solid #dbdbdb;

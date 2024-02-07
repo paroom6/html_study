@@ -1,11 +1,10 @@
 const addBox = document.querySelector(".add-box-button");
 addBox.onclick = () => {
     const boxContainer = document.querySelector(".box-container");
-    const movedContainer = document.querySelector(".moved-box-container");
     boxContainer.innerHTML += `<div class="box"></div>`;
-
+    
     const boxList = document.querySelectorAll(".box");
-   
+    const movedContainer = document.querySelector(".moved-box-container");
     for (let i = 0; i < boxList.length; i++) {
         boxList[i].onclick = () => {//이벤트 핸들러 중첩 주의 클릭 이벤트가 한번만 일어나는등 에러 발생
             let isBlueBox = boxList[i].classList.contains("blue-box");

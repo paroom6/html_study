@@ -12,27 +12,27 @@ function getTodoList() {
 
         for (let todo of todoList) {
             todoContentList.innerHTML += `
-            <li class="todo-content-box">
-            <div class="todo-content-header">
-            <span>
-            <i class="fa-regular fa-star"></i>
-            </span>
-            <span class="todo-content-date">
-            ${todo.date}
-            </span>
-            </div>
-            <div class="todo-content-main">    
-            <pre class="todo-content">${todo.todoContent}</pre>
-            </div>
-            <div class="todo-content-footer" >
-            <button class="todo-edit-button" onclick="handleEditTodoModalOpen(${todo.todoId})">
-            <i class="fa-solid fa-pencil"></i>
-            </button>
-            <button class="todo-remove-button" onclick="handleRemoveTodoClick(${todo.todoId})">
-            <i class="fa-regular fa-trash-can"></i>
-            </button>
-            </div>
-            </li>`;
+                <li class="todo-content-box">
+                    <div class="todo-content-header">
+                        <span>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                        <span class="todo-content-date">
+                            ${todo.date}
+                        </span>
+                    </div>
+                    <div class="todo-content-main">    
+                        <    class="todo-content">${todo.todoContent}</pre>
+                    </div>
+                    <div class="todo-content-footer" >
+                        <button class="todo-edit-button" onclick="handleEditTodoModalOpen(${todo.todoId})">
+                            <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button class="todo-remove-button" onclick="handleRemoveTodoClick(${todo.todoId})">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                    </div>
+                </li>`;
         }
 }
 

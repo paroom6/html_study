@@ -1,0 +1,76 @@
+
+.main-layer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    width: 100%;
+    height: 100%;
+    vertical-align: baseline;
+}
+.main-container {
+    box-shadow: 1px 0px 10px #00000011;
+    border: 1px solid #dbdbdb;
+    width: 500px;
+    height: 750px;
+    background-color: white;
+}
+.todo-input {
+    text-align: center;
+    /* 클릭시 나타나는 라인 */
+    outline: none;
+    border: 1px solid #dbdbdb;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    &:focus {
+        background-color: #fafafa;
+    }
+}
+header {
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+
+}
+.main-title {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: default;
+}
+
+.sub-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: default;
+}
+
+.list-container {
+    border-bottom:1px solid #dbdbdb ;
+    width: 100%;
+    height: 550px;
+}
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    border: 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    font-size: 25px;
+    &:hover {
+        background-color: #fafafa;
+    }
+    &:active {
+        background-color: #eee;
+    }
+}

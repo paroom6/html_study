@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        const box = document.querySelector(".box");
+        const newDiv = document.createElement("div");
+        const testText = document.createTextNode("test");
+        
+        newDiv.appendChild(testText);
+        box.appendChild(newDiv);     
+        // box.innerHTML = `<div>test</div>` //아직 html에서 처리 가능 위의 코드와 깉디
+        
+
+    </script>
+</body>
+</html>

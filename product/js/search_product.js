@@ -5,7 +5,7 @@
 async function handleSearchClick() {
     try {   
         const response = await fetch("http://localhost:8080/Product/product/list");
-        const responseData = await response.json();
+                                     
         console.log(responseData);
         const tbody = document.querySelector(".product-body");
         tbody.innerHTML = "";
@@ -15,7 +15,7 @@ async function handleSearchClick() {
     } catch (error) {
         console.log(error);
     }
-
+                                   
 }
 
 function productInfoTr({product_id, product_name, product_price, product_size}) {

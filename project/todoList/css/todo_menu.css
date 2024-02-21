@@ -1,3 +1,4 @@
+
 .side-bar-layout {
     display: none;
     position: absolute;
@@ -19,8 +20,6 @@
     top: 0px;
     /* 종속관계의 display none에 transition이 무시당한다.*/
     transition: left 0.5s ease-in-out; 
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
     width: 320px;
     height: 100%;
     background-color: white;
@@ -76,7 +75,7 @@
 .menu-list-container > li {
     display: flex;
     border-radius: 7px;
-    padding: 2px 8px;
+    padding: 8px 8px;
     height: 32px;
     font-size: 14px;
     color: #1f2328;
@@ -85,8 +84,25 @@
         background-color: #f3f4f6;
     }
 }
-
+.menu-list-container > button {
+    display: flex;
+    border-radius: 7px;
+    padding: 8px 8px;
+    height: 32px;
+    font-size: 14px;
+    color: #1f2328;
+    cursor: pointer;
+    &:hover {
+        background-color: #f3f4f6;
+    }
+}
 .menu-icons {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+
+}
+.menu-icon {
     margin-right: 8px;
 
 }

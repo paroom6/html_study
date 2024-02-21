@@ -22,7 +22,7 @@ function getTodoList() {
                         </span>
                     </div>
                     <div class="todo-content-main">    
-                        <    class="todo-content">${todo.todoContent}</pre>
+                        <pre  class="todo-content">${todo.todoContent}</pre>
                     </div>
                     <div class="todo-content-footer" >
                         <button class="todo-edit-button" onclick="handleEditTodoModalOpen(${todo.todoId})">
